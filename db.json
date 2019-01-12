@@ -1,0 +1,179 @@
+{
+  "accounts": [
+    {
+      "name": "Sid",
+      "email": "sid@digitaltaas.com",
+      "balance": 67.79444000000001,
+      "password": "secret",
+      "transactions": [
+        {
+          "action": "create",
+          "amount": 0,
+          "timestamp": "2019-01-12T05:13:03.244Z"
+        },
+        {
+          "action": "login",
+          "amount": 0,
+          "timestamp": "2019-01-12T05:13:23.200Z"
+        },
+        {
+          "action": "login",
+          "amount": 0,
+          "timestamp": "2019-01-12T05:37:29.292Z"
+        },
+        {
+          "action": "login",
+          "amount": 0,
+          "timestamp": "2019-01-12T05:40:27.895Z"
+        },
+        {
+          "action": "login",
+          "amount": 0,
+          "timestamp": "2019-01-12T05:41:29.273Z"
+        },
+        {
+          "action": "login",
+          "amount": 0,
+          "timestamp": "2019-01-12T05:42:57.433Z"
+        },
+        {
+          "action": "login",
+          "amount": 0,
+          "timestamp": "2019-01-12T17:26:47.513Z"
+        },
+        {
+          "action": "deposit",
+          "amount": "20",
+          "timestamp": "2019-01-12T18:59:36.440Z"
+        },
+        {
+          "action": "deposit",
+          "amount": 25.35,
+          "timestamp": "2019-01-12T19:02:19.786Z"
+        },
+        {
+          "action": "deposit",
+          "amount": 22.44444,
+          "timestamp": "2019-01-12T19:02:58.446Z"
+        }
+      ]
+    },
+    {
+      "name": "Kaushal",
+      "email": "kaushal@digitaltaas.com",
+      "balance": 0,
+      "password": "secret",
+      "transactions": [
+        {
+          "action": "create",
+          "amount": 0,
+          "timestamp": "2019-01-12T05:55:07.692Z"
+        }
+      ]
+    },
+    {
+      "name": "asdf",
+      "email": "sdfsdfsdfsd",
+      "balance": 0,
+      "password": "dssdf",
+      "transactions": [
+        {
+          "action": "create",
+          "amount": 0,
+          "timestamp": "2019-01-12T17:32:32.170Z"
+        }
+      ]
+    },
+    {
+      "name": "Sid",
+      "email": "sidasdfadf",
+      "balance": 0,
+      "password": "sadfasdfasd",
+      "transactions": [
+        {
+          "action": "create",
+          "amount": 0,
+          "timestamp": "2019-01-12T17:33:10.117Z"
+        }
+      ]
+    },
+    {
+      "name": "Sid",
+      "email": "sidasdfadf1222",
+      "balance": 0,
+      "password": "sadfasdfasd",
+      "transactions": [
+        {
+          "action": "create",
+          "amount": 0,
+          "timestamp": "2019-01-12T17:33:40.424Z"
+        }
+      ]
+    },
+    {
+      "name": "Sid",
+      "email": "asdfasdf",
+      "balance": 0,
+      "password": "sdfasdfasdf",
+      "transactions": [
+        {
+          "action": "create",
+          "amount": 0,
+          "timestamp": "2019-01-12T17:35:26.320Z"
+        }
+      ]
+    },
+    {
+      "name": "Sid",
+      "email": "adsadfasdfsd",
+      "balance": 0,
+      "password": "asdfasdf",
+      "transactions": [
+        {
+          "action": "create",
+          "amount": 0,
+          "timestamp": "2019-01-12T17:36:03.188Z"
+        }
+      ]
+    },
+    {
+      "name": "Sid",
+      "email": "asdfasdf123123",
+      "balance": 0,
+      "password": "asdfasdf",
+      "transactions": [
+        {
+          "action": "create",
+          "amount": 0,
+          "timestamp": "2019-01-12T17:39:51.099Z"
+        }
+      ]
+    },
+    {
+      "name": "Sid",
+      "email": "sidasdfasdfasdfsdf",
+      "balance": 0,
+      "password": "asdfasdf",
+      "transactions": [
+        {
+          "action": "create",
+          "amount": 0,
+          "timestamp": "2019-01-12T17:41:59.470Z"
+        }
+      ]
+    },
+    {
+      "name": "Sid",
+      "email": "junk@sid.com",
+      "balance": 0,
+      "password": "asdfasdf",
+      "transactions": [
+        {
+          "action": "create",
+          "amount": 0,
+          "timestamp": "2019-01-12T17:49:24.543Z"
+        }
+      ]
+    }
+  ]
+}

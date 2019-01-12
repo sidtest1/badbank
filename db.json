@@ -3,7 +3,7 @@
     {
       "name": "Sid",
       "email": "sid@digitaltaas.com",
-      "balance": 67.79444000000001,
+      "balance": 108.53444000000002,
       "password": "secret",
       "transactions": [
         {
@@ -55,6 +55,76 @@
           "action": "deposit",
           "amount": 22.44444,
           "timestamp": "2019-01-12T19:02:58.446Z"
+        },
+        {
+          "action": "balance",
+          "amount": 0,
+          "timestamp": "2019-01-12T20:14:24.623Z"
+        },
+        {
+          "action": "balance",
+          "amount": 0,
+          "timestamp": "2019-01-12T20:17:30.324Z"
+        },
+        {
+          "action": "balance",
+          "amount": 0,
+          "timestamp": "2019-01-12T20:19:56.882Z"
+        },
+        {
+          "action": "balance",
+          "amount": 0,
+          "timestamp": "2019-01-12T20:21:04.362Z"
+        },
+        {
+          "action": "balance",
+          "amount": 0,
+          "timestamp": "2019-01-12T20:21:44.643Z"
+        },
+        {
+          "action": "balance",
+          "amount": 0,
+          "timestamp": "2019-01-12T20:22:21.471Z"
+        },
+        {
+          "action": "deposit",
+          "amount": 25,
+          "timestamp": "2019-01-12T20:22:58.553Z"
+        },
+        {
+          "action": "deposit",
+          "amount": 50.5,
+          "timestamp": "2019-01-12T20:25:27.548Z"
+        },
+        {
+          "action": "deposit",
+          "amount": 25.24,
+          "timestamp": "2019-01-12T20:26:52.058Z"
+        },
+        {
+          "action": "balance",
+          "amount": 0,
+          "timestamp": "2019-01-12T20:27:32.549Z"
+        },
+        {
+          "action": "withdraw",
+          "amount": 50,
+          "timestamp": "2019-01-12T20:36:36.960Z"
+        },
+        {
+          "action": "withdraw",
+          "amount": 10,
+          "timestamp": "2019-01-12T20:36:44.035Z"
+        },
+        {
+          "action": "Transactions",
+          "amount": 0,
+          "timestamp": "2019-01-12T20:44:09.458Z"
+        },
+        {
+          "action": "login",
+          "amount": 0,
+          "timestamp": "2019-01-12T20:51:09.066Z"
         }
       ]
     },

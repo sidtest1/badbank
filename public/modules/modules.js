@@ -62,11 +62,15 @@ ui.deposit = `
 
 ui.withdraw = `
 <div class="tab-pane" id="withdraw">
-  <div class="card text-white bg-danger mb-3" style="max-width: 30rem;">
+  <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
     <div class="card-header">Withdraw</div>
     <div class="card-body">
-      <h5 class="card-title">Welcome to the Bank!</h5>
-      <p class="card-text">Please use the top navigation bar to access features</p>
+    <p class="card-text"> Email </p>
+    <input type="email" Id="email" placeholder="Email"/><br><br>
+    <p class="card-text"> Amount</p>
+    <input type="number" Id="amount" min="0" step="0.01" value="0.00" />
+    <br><br>
+    <button type="button" class="btn btn_withdraw" onclick='withdraw()'>Submit</button>
     </div>
   </div>
 </div>
@@ -74,11 +78,12 @@ ui.withdraw = `
 
 ui.transactions = `
 <div class="tab-pane" id="transactions">
-  <div class="card text-white bg-info mb-3" style="max-width: 30rem;">
+  <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
     <div class="card-header">Transactions</div>
     <div class="card-body">
-      <h5 class="card-title">Welcome to the Bank!</h5>
-      <p class="card-text">Please use the top navigation bar to access features</p>
+    <p class="card-text"> Email </p>
+    <input type="email" Id="email" placeholder="Email"/><br><br>
+    <button type="button" class="btn btn_transactions" onclick='transactions()'>Show Transactions</button>
     </div>
   </div>
 </div>
@@ -86,11 +91,12 @@ ui.transactions = `
 
 ui.balance = `
 <div class="tab-pane" id="balance">
-  <div class="card bg-light mb-3" style="max-width: 30rem;">
+  <div class="card bg-success mb-3" style="max-width: 18rem;">
     <div class="card-header">Balance</div>
     <div class="card-body">
-      <h5 class="card-title">Welcome to the Bank!</h5>
-      <p class="card-text">Please use the top navigation bar to access features</p>
+    <p class="card-text"> Email </p>
+    <input type="email" Id="email" placeholder="Email"/><br><br>
+    <button type="button" class="btn btn_balance" onclick='balance()'>Balance</button>
     </div>
   </div>
 </div>
@@ -110,11 +116,10 @@ ui.default = `<div class="tab-pane active" id="badbank">
 
 ui.allData = `
 <div class="tab-pane" id="alldata">
-  <div class="card text-white bg-dark mb-3" style="max-width: 30rem;">
+  <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
     <div class="card-header">All Data</div>
     <div class="card-body">
-      <h5 class="card-title">Welcome to the Bank!</h5>
-      <p class="card-text">Please use the top navigation bar to access features</p>
+    <button type="button" class="btn btn_alldata" onclick='allData()'>Show All Data</button>
     </div>
   </div>
 </div>

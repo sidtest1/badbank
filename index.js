@@ -79,9 +79,6 @@ app.get('/account/login/:email/:password', function (req, res) {
         "amount"    : 0,
         "timestamp" : new Date()
     };
-   db.get('accounts').
-      find({email: req.params.email, password: req.params.password}).
-      get('transactions').push(transaction).write();
 
     var account = db.get('accounts').
          find({email: req.params.email, password: req.params.password}).value();
@@ -91,6 +88,12 @@ app.get('/account/login/:email/:password', function (req, res) {
       res.send("Invalid Login");
     }
     else {
+      db.get('accounts').
+         find({email: req.params.email}).
+         get('transactions').push(transaction).write();
+      account = db.get('accounts').
+              find({email: req.params.email}).value();
+
       console.log(account);
       res.send(account);
     }
@@ -100,6 +103,31 @@ app.get('/account/get/:email', function (req, res) {
 
     // YOUR CODE
     // Return account based on email
+
+    var transaction = {
+        "action" : "balance",
+        "amount"    : 0,
+        "timestamp" : new Date()
+    };
+
+    var account = db.get('accounts').find({email: req.params.email}).value();
+    if(account != null) {
+      db.get('accounts').
+         find({email: req.params.email}).
+         get('transactions').push(transaction).write();
+         //Get current balance
+         var balance = db.get('accounts').
+            find({email: req.params.email}).
+            get('balance').value();
+
+      console.log(balance);
+      res.send("Balance = $"+balance);
+    }
+    else {
+          console.log("Invalid Id");
+          res.send("Invalid Id");
+    }
+
 });
 
 app.get('/account/deposit/:email/:amount', function (req, res) {
@@ -130,7 +158,7 @@ app.get('/account/deposit/:email/:amount', function (req, res) {
          //Get the updated account
          account = db.get('accounts').find({email: req.params.email}).value();
          console.log(account);
-         res.send(account);
+         res.send("New Balance = $"+balance);
 
     }else {
       console.log("Invalid Login");
@@ -144,18 +172,81 @@ app.get('/account/withdraw/:email/:amount', function (req, res) {
     // YOUR CODE
     // Withdraw amount for email
     // return success or failure string
+
+    var transaction = {
+        "action" : "withdraw",
+        "amount"    : parseFloat(req.params.amount),
+        "timestamp" : new Date()
+    };
+
+    var account = db.get('accounts').find({email: req.params.email}).value();
+    if (account != null) {
+      //Get current balance
+      var balance = parseFloat(db.get('accounts').
+         find({email: req.params.email}).
+         get('balance').value());
+         //update the balance to new amount
+       balance -= parseFloat(req.params.amount);
+       if (balance >= 0) {
+          //Push the current deposit transaction
+          db.get('accounts').
+             find({email: req.params.email}).
+             get('transactions').push(transaction).write();
+          db.get('accounts').
+                  find({email: req.params.email}).assign({'balance':balance}).write();
+             //Get the updated account
+             account = db.get('accounts').find({email: req.params.email}).value();
+             console.log(account);
+             res.send("New Balance = $"+balance);
+       } else {
+         console.log("Insufficient Funds");
+         res.send("Insufficient Funds");
+       }
+
+    }else {
+      console.log("Invalid Login");
+      res.send("Invalid Login");
+    }
+
 });
 
 app.get('/account/transactions/:email', function (req, res) {
 
     // YOUR CODE
     // Return all transactions for account
+    var transaction = {
+        "action" : "transactions",
+        "amount"    : 0,
+        "timestamp" : new Date()
+    };
+
+    var account = db.get('accounts').find({email: req.params.email}).value();
+    if(account != null) {
+      db.get('accounts').
+         find({email: req.params.email}).
+         get('transactions').push(transaction).write();
+         //Get current balance
+         var transactions = db.get('accounts').
+            find({email: req.params.email}).
+            get('transactions').value();
+
+      console.log(transactions);
+      res.send(transactions);
+    }
+    else {
+          console.log("Invalid Id");
+          res.send("Invalid Id");
+    }
 });
 
 app.get('/account/all', function (req, res) {
 
     // YOUR CODE
     // Return data for all accounts
+
+    var accounts = JSON.stringify(db.get('accounts').value(),null,4);
+    console.log(accounts);
+    res.send(accounts);
 });
 
 // start server
